@@ -23,3 +23,8 @@ const { name: fullName, Deatils: { address } } = user;
 console.log("Name", fullName, "Address:", address);
 
 // name alias name  use fullName 
+
+//TODO : Array destuctureing
+const device = ["Mobile", "Laptop", "Tablet"]
+const [M , L , T] = device;
+console.log(L);

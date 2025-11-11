@@ -45,3 +45,4 @@ const cartTotal: Icart = (price, quantity) => {
 }
 
 console.log(cartTotal(10, 10));
+

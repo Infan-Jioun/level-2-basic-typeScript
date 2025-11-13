@@ -30,3 +30,5 @@ const developerInfo: Developer<{
     }
 }
 console.log(developerInfo);
+
+

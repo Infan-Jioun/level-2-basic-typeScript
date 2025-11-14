@@ -28,8 +28,20 @@ const user: User = {
 //  const address = user["address"]
 // console.log({ myId, name, address });
 // constraint with function 
-const getPropertyFromObj = (obj: User, key: keyof User) => {
+// use generics 
+const getPropertyFromObj = <X>(obj: X, key: keyof X) => {
     return obj[key]
 }
-const result = getPropertyFromObj(user, "name")
-console.log(result);
+// const result1 = getPropertyFromObj(user, "name")
+// console.log(result1);
+
+const product = {
+    brand: "Hp",
+}
+const student = {
+    id: 123,
+    class: "four"
+}
+
+const result2 = getPropertyFromObj(product, "brand")
+console.log(result2);

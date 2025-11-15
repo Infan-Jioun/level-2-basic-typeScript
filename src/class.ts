@@ -30,4 +30,6 @@ class Animal {
 }
 // object
 const cat = new Animal("caty", "cat", "mew mew mew")
-cat.makeSound()
+cat.makeSound();
+
+/// perametar use korle codebase easy hoi 

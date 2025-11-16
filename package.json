@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/static.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/polmorphism.ts"
   },
   "devDependencies": {
     "ts-node-dev": "^2.0.0",

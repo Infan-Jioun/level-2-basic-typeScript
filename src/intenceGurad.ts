@@ -24,10 +24,18 @@ class Teacher extends Person {
         console.log(`${this.name} doink ${numbarsOfHours} gonta class ne`);
     }
 }
+
+// Function Guard ;
+const isStudent = (user: Person) => {
+    return user instanceof Student;
+}
+const isTeacher = (user: Person) => {
+    return user instanceof Teacher;
+}
 const getUserInfo = (user: Person) => {
-    if (user instanceof Student) {
+    if (isStudent(user)) {
         user.doStudy(10)
-    } else if (user instanceof Teacher) {
+    } else if (isTeacher(user)) {
         user.takeClass(5)
     }
 }

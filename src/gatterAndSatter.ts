@@ -3,18 +3,23 @@
 class BackAccount {
     userId: number;
     userName: string;
-    bankBalance: number
+    private bankBalance: number
     constructor(userId: number, userName: string, bankBalance: number) {
         this.userId = userId;
         this.userName = userName;
         this.bankBalance = bankBalance;
     }
-    addBalacne(balance: number) {
-        this.bankBalance = this.bankBalance + balance
+    // addBalaee(balance: number) {
+    //     this.bankBalance = this.bankBalance + balance
+    // }
+    set addBalance(amount: number) {
+        this.bankBalance = this.bankBalance + amount
+    }
+
+    get getBalance() {
+        return this.bankBalance
     }
 }
-// child  
-class Student extends BackAccount { }
-const student1 = new Student(32, "infan", 300)
-student1.addBalacne(30)
-console.log(student1);
+const infanAccouunt = new BackAccount(3, "iNFAN", 100)
+infanAccouunt.addBalance = 60;
+console.log(infanAccouunt.getBalance);

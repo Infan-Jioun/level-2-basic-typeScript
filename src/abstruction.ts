@@ -2,25 +2,46 @@
 //  1. Interface
 //  2. Abstruction
 
-interface MediaPlayer {
-    play(): void
-    pause(): void
-    stop(): void
-}
+// interface MediaPlayer {
+//     play(): void
+//     pause(): void
+//     stop(): void
+// }
 
-// implemention
-//implements ব্যবহার করা হয় যাতে class টা interface-এর সব rule বাধ্য হয়ে অনুসরণ করে, কোনো method বাদ না যায়।
-class Musicplayer implements MediaPlayer {
+// // implemention
+// //implements ব্যবহার করা হয় যাতে class টা interface-এর সব rule বাধ্য হয়ে অনুসরণ করে, কোনো method বাদ না যায়।
+// class Musicplayer implements MediaPlayer {
+//     play(): void {
+//         console.log("Playing music ..... ");
+//     }
+//     pause(): void {
+//         console.log("Pause Music.....");
+//     }
+//     stop(): void {
+//         console.log("Stoped Music....");
+//     }
+// }
+
+// const infanPlayer = new Musicplayer();
+// infanPlayer.pause()
+
+abstract class MediaPlayer {
+    abstract play(): void
+    abstract pause(): void
+    abstract stop(): void
+}
+// implementation 
+class infanPlayer extends MediaPlayer {
     play(): void {
-        console.log("Playing music ..... ");
+        console.log("palying music...");
     }
     pause(): void {
-        console.log("Pause Music.....");
+        console.log("Music Paused");
     }
     stop(): void {
-        console.log("Stoped Music....");
+        console.log("Music is stoped....");
     }
 }
 
-const infanPlayer = new Musicplayer();
-infanPlayer.pause()
+const infan = new infanPlayer();
+infan.play()
